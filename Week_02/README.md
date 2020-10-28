@@ -1,1 +1,1 @@
-学习笔记
+![image](https://github.com/brickGodMan/JAVA-000/blob/main/Week_02/src/img/gc-sb-logAnalysis.png)
