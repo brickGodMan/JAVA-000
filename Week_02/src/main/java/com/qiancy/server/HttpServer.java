@@ -20,19 +20,16 @@ public class HttpServer {
 
 
     public static void main(String[] args) throws IOException {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 100, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>(10));
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(40, 40, 1, TimeUnit.SECONDS, new LinkedBlockingDeque<>(10));
         ServerSocket serverSocket = new ServerSocket(8801);
         while (true) {
             Socket socket = serverSocket.accept();
             //单线程
 //            service(socket);
 
-//            多线程
-            Runnable runnable = () -> {
-                service(socket);
-            };
+            //多线程
+            Runnable runnable = () -> service(socket);
             executor.execute(runnable);
-
         }
     }
 
