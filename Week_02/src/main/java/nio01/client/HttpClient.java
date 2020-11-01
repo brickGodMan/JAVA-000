@@ -1,5 +1,5 @@
 
-package com.qiancy.client;
+package nio01.client;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.RequestConfig;
@@ -30,7 +30,7 @@ public class HttpClient {
 
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
-        HttpGet httpGet = new HttpGet("http://localhost:8801");
+        HttpGet httpGet = new HttpGet("http://localhost:8088/api/hello");
         httpGet.setConfig(requestConfig);
         try {
             CloseableHttpResponse reponse = httpClient.execute(httpGet);
