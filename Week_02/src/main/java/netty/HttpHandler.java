@@ -43,7 +43,7 @@ public class HttpHandler  extends ChannelInboundHandlerAdapter {
     private void handlerTest(FullHttpRequest fullHttpRequest, ChannelHandlerContext channelHandlerContext) {
         FullHttpResponse response = null;
         try {
-            String value = "hello,zendwang";
+            String value = "hello,godman";
             response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, Unpooled.wrappedBuffer(value.getBytes("UTF-8")));
             response.headers().set("Content-Type","application/json");
             response.headers().setInt("Content-Length",response.content().readableBytes());
