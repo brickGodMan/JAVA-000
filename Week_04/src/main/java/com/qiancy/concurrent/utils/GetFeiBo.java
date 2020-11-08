@@ -9,6 +9,11 @@ package com.qiancy.concurrent.utils;
  */
 public class GetFeiBo {
 
+    /**
+     *  根据n获取对应的斐波那契数
+     * @param n
+     * @return
+     */
     public static int fiBo(int n) {
         if (n < 0) {
             return -1;
