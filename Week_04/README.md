@@ -1,9 +1,8 @@
 # 第四周作业
 ***
 ## 思考有多少种方式，在 main 函数启动一个新线程，运行一个方法，拿到这个方法的返回值后，退出主线程？
-### 1通过Future获取异步线程执行结果
-&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/FutureOne.java
-)
+#### 1通过Future获取异步线程执行结果
+&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/FutureOne.java)
 
 &ensp;&ensp;&ensp;FutureOne：
 ```java
@@ -36,9 +35,8 @@ public class FutureOne {
     }
 }
 ```
-### 2通过FutureTask获取异步线程执行结果
-&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/FutureTask.java
-)
+#### 2通过FutureTask获取异步线程执行结果
+&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/FutureTask.java)
 
 &ensp;&ensp;&ensp;FutureTask：
 ```java
@@ -72,15 +70,14 @@ public class FutureTask {
     }
 }
 ```
-### 3通过CountDown获取异步线程执行结果
-&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/CountDown.java
-)
-### 4通过CyclicBarrierResult获取异步线程执行结果
-&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/CyclicBarrierResult.java
-)
-### 5通过CompletableFuture获取异步线程执行结果
-&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/CompletableFuture.java
-)
-### 6通过InterfaceResult获取异步线程执行结果
-&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/InterfaceResult.java
-)
+#### 3通过CountDown获取异步线程执行结果
+&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/CountDown.java)
+#### 4通过CyclicBarrierResult获取异步线程执行结果
+&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/CyclicBarrierResult.java)
+#### 5通过CompletableFuture获取异步线程执行结果
+&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/CompletableFuture.java)
+#### 6通过InterfaceResult获取异步线程执行结果
+&ensp;&ensp;&ensp;[代码地址](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/main/java/com/qiancy/concurrent/future/InterfaceResult.java)
+
+## 4.（必做）把多线程和并发相关知识带你梳理一遍，画一个脑图，截图上传到 Github 上
+![](https://github.com/brickGodMan/JAVA-000/blob/main/Week_04/src/img/concurrentSummarize.png)
