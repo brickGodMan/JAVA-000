@@ -1,0 +1,19 @@
+{
+  "groups": [
+    {
+      "name": "self",
+      "type": "java.lang.String"
+    }
+  ],
+  "properties": [
+    {
+      "name": "self.properties",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "self.name",
+      "type": "java.lang.String",
+      "description": "test name"
+    }
+  ]
+}
