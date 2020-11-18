@@ -58,7 +58,7 @@ provides: self-spring-boot-starter
 </dependency>
 ```
 测试自定义starter功能
-![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_05/springboot/src/img/integration_starter_run_result.png)
+![](https://github.com/brickGodMan/JAVA-000/blob/main/Week_05/springboot/src/img/integration_starter_run_result.png)
 
 自定义jdbc
 
@@ -123,9 +123,9 @@ public void addUser() {
 }
 ```
 运行效果图：
-![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_05/springboot/src/img/dbc_insert_and_query_result.png)
+![增加](https://github.com/brickGodMan/JAVA-000/tree/main/Week_05/springboot/src/img/jdbc_insert_and_query_result.png)
 
-![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_05/springboot/src/img/jdbc_batch_and_query_result.png)
+![批量增加](https://github.com/brickGodMan/JAVA-000/tree/main/Week_05/springboot/src/img/jdbc_batch_and_query_result.png)
 
 查询：
 ```java
