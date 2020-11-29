@@ -38,8 +38,8 @@ alter table commodity comment '商品表';
 /*==============================================================*/
 create table commodity_suppliers_ref
 (
-   商品id                 varchar(32) comment '商品id',
-   供应商id                varchar(32) comment '供应商id'
+   busi_id                varchar(32) comment '商品id',
+   supplier_id                varchar(32) comment '供应商id'
 );
 
 alter table commodity_suppliers_ref comment '商品供应商关联表';
@@ -47,7 +47,7 @@ alter table commodity_suppliers_ref comment '商品供应商关联表';
 /*==============================================================*/
 /* Table: "order"                                               */
 /*==============================================================*/
-create table "order"
+create table order_t
 (
    id                   varchar(32) comment '订单id',
    user_id              varchar(32) comment '用户id',
@@ -57,7 +57,7 @@ create table "order"
    update_time          datetime comment '修改时间'
 );
 
-alter table "order" comment '订单表';
+alter table order_t comment '订单表';
 
 /*==============================================================*/
 /* Table: order_commodity_ref                                   */
@@ -75,8 +75,8 @@ alter table order_commodity_ref comment '订单商品关联表';
 /*==============================================================*/
 create table shopping_card
 (
-   购物车id                varchar(32) comment '购物车id',
-   用户id                 varchar(32) comment '用户id'
+   id                varchar(32) comment '购物车id',
+   user_id                 varchar(32) comment '用户id'
 );
 
 alter table shopping_card comment '购物车';
@@ -86,10 +86,10 @@ alter table shopping_card comment '购物车';
 /*==============================================================*/
 create table suppliers
 (
-   供应商id                varchar(32) comment '供应商id',
-   名称                   varchar(20) comment '名称',
-   注册号                  varchar(32) comment '注册号',
-   联系方式                 varchar(11) comment '联系方式'
+   id                varchar(32) comment '供应商id',
+   supplier_name                   varchar(20) comment '名称',
+   reg_num                  varchar(32) comment '注册号',
+   phone                 varchar(11) comment '联系方式'
 );
 
 alter table suppliers comment '供应商';
