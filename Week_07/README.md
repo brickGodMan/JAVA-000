@@ -12,9 +12,9 @@
 2. 动态数据源
 3. 参数化变更数据源
 
-我采用的是多套源策略（[代码目录]()）
+我采用的是多套源策略（[代码目录](https://github.com/brickGodMan/JAVA-000/tree/main/Week_07/dynamic-datasource)）
 
-[application.properties]() 配置如下：
+[application.properties](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/dynamic-datasource/src/main/resources/config/application.properties) 配置如下：
 ```yaml
 server.port=8080
 server.servlet.context-path=/datasource
@@ -44,7 +44,7 @@ spring.datasource.slave.password=123456
 spring.datasource.slave.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 关键配置：
-[DynamicDatasourceConfig]()、[MasterConfig]()、[SlaveConfig]()
+[DynamicDatasourceConfig](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/dynamic-datasource/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDatasourceConfig.java)、[MasterConfig](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/dynamic-datasource/src/main/java/com/qiancy/dynamic/datasource/config/MasterConfig.java)、[SlaveConfig](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/dynamic-datasource/src/main/java/com/qiancy/dynamic/datasource/config/SlaveConfig.java)
 ```java
 @Configuration
 public class DynamicDatasourceConfig {
@@ -114,7 +114,7 @@ mapper目录下分别建立master与slave文件夹分别对应不同数据源
 
 ###### 利用sharding-sphere与JdbcTemplate实现读写分离切换数据源 （[代码目录]()）
 
-[application.properties]() 配置如下：
+[application.properties](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/sharding-sphere/src/main/resources/application.properties) 配置如下：
 ```yaml
 server.port=8080
 server.servlet.context-path=/datasource
@@ -152,4 +152,4 @@ spring.main.allow-bean-definition-overriding=true
 ```
 运行日志如下图，查询使用slave库，插入使用master库
 
-![运行结果]()
+![运行结果](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/db/sharding-img.png)
