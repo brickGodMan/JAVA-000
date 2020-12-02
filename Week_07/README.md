@@ -165,3 +165,9 @@ spring.main.allow-bean-definition-overriding=true
 运行日志如下图，查询使用slave库，插入使用master库
 
 ![运行结果](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/db/sharding-img.png)
+
+
+
+
+### 参考链接
+[搞定SpringBoot多数据源(2)](https://mianshenglee.github.io/2020/01/16/multi-datasource-2.html)
