@@ -10,6 +10,7 @@
 该插入我只用了1w左右数据做插入测试
 1. 一条条插入：速度最慢
 2. 批量插入：效率提升明显（大数据插入优先选择批量）
+
 所使用的[sql](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/db/data1W.sql)脚本
 
 ---
