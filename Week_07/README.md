@@ -171,3 +171,5 @@ spring.main.allow-bean-definition-overriding=true
 
 ### 参考链接
 [搞定SpringBoot多数据源(2)](https://mianshenglee.github.io/2020/01/16/multi-datasource-2.html)
+
+[sharding-sphere读写分离-代码零入侵](https://cloud.tencent.com/developer/article/1451202)
