@@ -120,7 +120,7 @@ public class SlaveConfig {
 
 }
 ```
-mapper目录下分别建立master与slave文件夹分别对应不同数据源
+mapper目录下分别建立master与slave文件夹,不同文件夹下的相关数据库操作分别对应到master与slave数据源。这样就可以根据业务是否为查询或变更，把相关mapper放到不同文件夹下达到读写分离的目的。
 
 3、（必做）读写分离-数据库框架版本版本2.0
 
