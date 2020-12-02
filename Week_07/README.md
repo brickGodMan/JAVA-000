@@ -112,7 +112,7 @@ mapper目录下分别建立master与slave文件夹分别对应不同数据源
 
 3、（必做）读写分离-数据库框架版本版本2.0
 
-###### 利用sharding-sphere与JdbcTemplate实现读写分离切换数据源 （[代码目录]()）
+###### 利用sharding-sphere与JdbcTemplate实现读写分离切换数据源 （[代码目录](https://github.com/brickGodMan/JAVA-000/tree/main/Week_07/sharding-sphere)）
 
 [application.properties](https://github.com/brickGodMan/JAVA-000/blob/main/Week_07/sharding-sphere/src/main/resources/application.properties) 配置如下：
 ```yaml
