@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96be59eb-634d-4dae-8e9b-cab66be4cf2e" name="Default Changelist" comment="利用扫描不同包的方式，使用不同的数据源">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/annotation/DS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/aop/DynamicDataSourceAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDatasourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/MasterConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/SlaveConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/constants/DataSourceConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/context/DynamicDataSourceContextHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/controller/TestDsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/master/OrderMapperMaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/slave/OrderMapperSlave.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/services/IOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/services/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/master/OrderMapperMaster.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/slave/OrderMapperSlave.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/dynamic-datasource.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/annotation/DS.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/aop/DynamicDataSourceAspect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/config/DynamicDataSource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/config/DynamicDatasourceConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/config/MasterConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/config/SlaveConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/constants/DataSourceConstants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/context/DynamicDataSourceContextHolder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/controller/TestDsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/entity/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/mapper/master/OrderMapperMaster.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/mapper/slave/OrderMapperSlave.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/services/IOrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/qiancy/dynamic/datasource/services/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/config/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/config/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/config/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/master/OrderMapperMaster.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/slave/OrderMapperSlave.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sharding-sphere/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sharding-sphere/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sharding-sphere/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sharding-sphere/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sharding-sphere/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sharding-sphere/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sharding-sphere/sharding-master-slave.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_01/src/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_01/src/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_01/src/HelloClassLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_01/src/HelloClassLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/client/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/client/HttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/netty/HttpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/netty/HttpHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/netty/HttpInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/netty/HttpInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio01/server/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/NettyServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/NettyServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/filter/HttpRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/filter/HttpRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/filter/HttpRequestFilterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/filter/HttpRequestFilterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/inbound/HttpInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/inbound/HttpInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/inbound/HttpInboundServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/inbound/HttpInboundServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/outbound/httpclient/HttpOutboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/outbound/httpclient/HttpOutboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/outbound/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/outbound/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/outbound/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/src/main/java/nio02/gateway/outbound/netty/NettyClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/NettyServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/NettyServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/filter/HttpRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/filter/HttpRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/filter/HttpRequestFilterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/filter/HttpRequestFilterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/inbound/HttpInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/inbound/HttpInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/inbound/HttpInboundServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/inbound/HttpInboundServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/outbound/httpclient/HttpOutboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/outbound/httpclient/HttpOutboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/outbound/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/outbound/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/outbound/netty/NettyClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_03/src/main/java/io/qiancy/gateway/outbound/netty/NettyClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/CompletableFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/CompletableFuture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/CountDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/CountDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/CyclicBarrierResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/CyclicBarrierResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/FutureTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/FutureTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/IResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/IResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/Join.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/Join.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/SemaphoreResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/future/SemaphoreResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/utils/GetFeiBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_04/src/main/java/com/qiancy/concurrent/utils/GetFeiBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_05/BeanAssembly/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_05/BeanAssembly/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_05/BeanAssembly/src/main/java/com/qiancy/spring/config/BeanAnnotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_05/BeanAssembly/src/main/java/com/qiancy/spring/config/BeanAnnotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_05/BeanAssembly/src/main/java/com/qiancy/spring/xml/TestAssembly.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_05/BeanAssembly/src/main/java/com/qiancy/spring/xml/TestAssembly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_05/BeanAssembly/target/classes/com/qiancy/spring/config/BeanAnnotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_05/BeanAssembly/target/classes/com/qiancy/spring/config/BeanAnnotation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_05/BeanAssembly/target/classes/com/qiancy/spring/config/BeanConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_05/BeanAssembly/target/classes/com/qiancy/spring/config/BeanConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_05/BeanAssembly/target/classes/com/qiancy/spring/config/TestAnno.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_05/BeanAssembly/target/classes/com/qiancy/spring/config/TestAnno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_05/BeanAssembly/target/classes/com/qiancy/spring/xml/TestAssembly.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_05/BeanAssembly/target/classes/com/qiancy/spring/xml/TestAssembly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_05/self-starter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_05/self-starter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_06/db/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_06/db/init.sql" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../../teacherCode/nicefish-backend/nicefish-common/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-425">
+              <caret line="10" selection-start-line="10" selection-end-line="20" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-83">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/annotation/DS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/controller/TestDsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/constants/DataSourceConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDatasourceConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/SlaveConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="40" column="60" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/context/DynamicDataSourceContextHolder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-200">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/aop/DynamicDataSourceAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-243">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config/jdbc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="67" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Wrapper</find>
+      <find>connector</find>
+      <find>testDsController</find>
+      <find>db2</find>
+      <find>mybatis.spring</find>
+      <find>spring-boot-starter-aop</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>slave</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/constants/DataSourceConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/annotation/DS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/controller/TestDSController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/jdbc.propertites" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDataSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/entity/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDataSourceContextHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/services/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/aop/DynamicDataSourceAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/services/IOrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/OrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/controller/TestDsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/master/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/slave/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/slave/OrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/master/OrderMapperMaster.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/slave/OrderMapperSlave.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/SlaveConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/MasterConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/services/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDatasourceConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/application.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dynamic-datasource" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dynamic-datasource" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dynamic-datasource" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="mybatis-generator" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1925" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamic-datasource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamic-datasource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\code\JAVA-000\Week_07\src\main\resources\mapper\master" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qiancy.dynamic.datasource.mapper.slave" />
+      <recent name="com.qiancy.dynamic.datasource.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\code\JAVA-000\Week_07\src\main\resources\mapper\slave" />
+      <recent name="F:\code\JAVA-000\Week_07\src\main\resources\mapper" />
+      <recent name="F:\code\JAVA-000\Week_07\src\main\java\com\qiancy\dynamic\datasource\mapper" />
+      <recent name="F:\code\JAVA-000\Week_07\src\main\java\com\qiancy\dynamic\datasource\entity" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="dynamic-datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qiancy.dynamic.datasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qiancy.dynamic.datasource.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96be59eb-634d-4dae-8e9b-cab66be4cf2e" name="Default Changelist" comment="" />
+      <created>1606656190414</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606656190414</updated>
+      <workItem from="1606656191945" duration="14737000" />
+      <workItem from="1606829264985" duration="3910000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="18647000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32991204" />
+      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32991204" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" weight="0.32991204" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.60703814" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="13" weight="0.61143696" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
+      <window_info anchor="right" id="SciView" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/controller/TestDsController.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/aop/DynamicDataSourceAspect.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/controller/TestDsController.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/2.0.3/mybatis-spring-2.0.3.jar!/org/mybatis/spring/annotation/MapperScan.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.2.2.RELEASE/spring-boot-2.2.2.RELEASE.jar!/org/springframework/boot/context/properties/ConfigurationProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../teacherCode/nicefish-backend/nicefish-common/src/main/resources/generatorConfig.xml" />
+    <entry file="file://$PROJECT_DIR$/../../teacherCode/nicefish-backend/nicefish-common/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.3.0/mybatis-plus-extension-3.3.0.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="43" column="72" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.3.0/mybatis-plus-extension-3.3.0.jar!/com/baomidou/mybatisplus/extension/service/IService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.3.0/mybatis-plus-core-3.3.0.jar!/com/baomidou/mybatisplus/core/conditions/Wrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1635">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-annotation/3.3.0/mybatis-plus-annotation-3.3.0.jar!/com/baomidou/mybatisplus/annotation/TableName.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_162/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_162/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.3.0/mybatis-plus-core-3.3.0.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/MasterConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/entity/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/master/OrderMapperMaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/mapper/slave/OrderMapperSlave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/services/IOrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/services/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/slave/OrderMapperSlave.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="78" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/master/OrderMapperMaster.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="80" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/constants/DataSourceConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/context/DynamicDataSourceContextHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/annotation/DS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/aop/DynamicDataSourceAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="10" selection-start-line="10" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="67" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/DynamicDatasourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/config/SlaveConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="40" column="60" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qiancy/dynamic/datasource/controller/TestDsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
