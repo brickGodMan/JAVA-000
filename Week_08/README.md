@@ -102,7 +102,8 @@ props:
   check-table-metadata-enabled: false
 
 ```
-####总结：
+
+#### 总结：
 该作业只完成了一半，能实现查询，插入操作一直在报错。后面集成hmily 实现分布式事务demo作业只能后面在补了。
 以下是报错信息，在努力解决中……
 ```yaml
