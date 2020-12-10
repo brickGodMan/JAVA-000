@@ -2,7 +2,7 @@
 ##### 第十五节课作业
 ##### 1.对前面设计的订单表，拆分2个库，每个库16张表。并在新结构演示常见的增删改查操作。
 
-这里使用了sharding-shpere proxy 中间件 所以配置普通数据源即可。我直接用来JdbcTemplate。
+这里使用了sharding-shpere proxy 中间件 所以配置普通数据源即可。我直接使用了JdbcTemplate来连接sharding proxy。
 
 直接写死实现了简单的增删改查功能：
 ```java
@@ -66,6 +66,48 @@ public class OrderController {
         orderService.deleteOrderBy(2);
         //返回数据
         return "success";
+    }
+}
+
+@Service
+public class OrderServiceImpl implements IOrderService {
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    @Override
+    public List<Order> getOrders() {
+        String sql = "select * from order_t ";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(
+                Order.class));
+    }
+
+    @Override
+    public void createOrder(Order order) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("insert into order_t(id, user_id, amount, status, create_time)");
+        sb.append("values(");
+        sb.append("" + order.getId()).append(", ");
+        sb.append("'" + order.getId()).append("', ");
+        sb.append("'" + order.getAmount()).append("', ");
+        sb.append("'" + order.getStatus()).append("',");
+        sb.append("'" + order.getCreateTime()).append("'");
+        sb.append(")");
+        jdbcTemplate.update(sb.toString());
+    }
+
+    @Override
+    public void updateOrder(int id) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("update order_t set status = 'u' where id = " + id);
+        jdbcTemplate.update(sb.toString());
+    }
+
+    @Override
+    public void deleteOrderBy(int id) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("delete from order_t where id = " + id);
+        jdbcTemplate.update(sb.toString());
     }
 }
 ```
