@@ -59,4 +59,28 @@ public class OrderController {
         return "success";
     }
 
+    /**
+     * 修改 id 为2的订单状态为u
+     */
+    @GetMapping("/update-order")
+    @ResponseBody
+    public String updateOrder() {
+        //默认master数据源查询
+        orderService.updateOrder(2);
+        //返回数据
+        return "success";
+    }
+
+    /**
+     * 删除 id 为2的订单
+     */
+    @GetMapping("/delete-order")
+    @ResponseBody
+    public String deleteOrder() {
+        //默认master数据源查询
+        orderService.deleteOrderBy(2);
+        //返回数据
+        return "success";
+    }
+
 }

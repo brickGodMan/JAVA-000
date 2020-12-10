@@ -27,7 +27,13 @@ public interface IOrderService{
 
     /**
      *  修改订单
-     * @param order
+     * @param id
      */
-    void updateOrder(Order order);
+    void updateOrder(int id);
+
+    /**
+     * 根据id 删除order
+     * @param id
+     */
+    void deleteOrderBy(int id);
 }

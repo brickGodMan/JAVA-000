@@ -34,9 +34,9 @@ public class OrderServiceImpl implements IOrderService {
         StringBuffer sb = new StringBuffer();
         sb.append("insert into order_t(id, user_id, amount, status, create_time)");
         sb.append("values(");
-        sb.append("'" + order.getId()).append("',");
-        sb.append("'" + order.getId()).append("',");
-        sb.append("'" + order.getAmount()).append("',");
+        sb.append("" + order.getId()).append(", ");
+        sb.append("'" + order.getId()).append("', ");
+        sb.append("'" + order.getAmount()).append("', ");
         sb.append("'" + order.getStatus()).append("',");
         sb.append("'" + order.getCreateTime()).append("'");
         sb.append(")");
@@ -44,11 +44,18 @@ public class OrderServiceImpl implements IOrderService {
     }
 
     @Override
-    public void updateOrder(Order order) {
+    public void updateOrder(int id) {
         StringBuffer sb = new StringBuffer();
-        sb.append("update order_t set status = )");
-        sb.append("where id = '").append(order.getId() + "'");
+        sb.append("update order_t set status = 'u' where id = " + id);
         jdbcTemplate.update(sb.toString());
     }
+
+    @Override
+    public void deleteOrderBy(int id) {
+        StringBuffer sb = new StringBuffer();
+        sb.append("delete from order_t where id = " + id);
+        jdbcTemplate.update(sb.toString());
+    }
+
 
 }
