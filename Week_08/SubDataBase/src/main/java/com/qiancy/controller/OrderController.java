@@ -33,7 +33,6 @@ public class OrderController {
     public Map<String, List<Order>> listOrder() {
         int initSize = 8;
         Map<String, List<Order>> result = new HashMap<>(initSize);
-        //默认master数据源查询
         List<Order> masterOrder = orderService.getOrders();
         result.put("orders", masterOrder);
         //返回数据
@@ -45,15 +44,12 @@ public class OrderController {
     @GetMapping("/create-order")
     @ResponseBody
     public String createOrder() {
-        int initSize = 8;
-        Map<String, List<Order>> result = new HashMap<>(initSize);
         Order order = new Order();
         order.setId("2");
         order.setUserId("2");
         order.setAmount("100");
         order.setStatus("1");
         order.setCreateTime(Date.valueOf(LocalDateTime.now().toLocalDate()));
-        //默认master数据源查询
         orderService.createOrder(order);
         //返回数据
         return "success";
@@ -65,7 +61,6 @@ public class OrderController {
     @GetMapping("/update-order")
     @ResponseBody
     public String updateOrder() {
-        //默认master数据源查询
         orderService.updateOrder(2);
         //返回数据
         return "success";
@@ -77,7 +72,6 @@ public class OrderController {
     @GetMapping("/delete-order")
     @ResponseBody
     public String deleteOrder() {
-        //默认master数据源查询
         orderService.deleteOrderBy(2);
         //返回数据
         return "success";
