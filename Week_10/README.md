@@ -46,7 +46,7 @@ appendonly yes
 ![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_10/img/join-cluster-success.jpg)
 
 最后可查看集群信息如下：
-![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_10/img/cluster-info-nodes.jpg)
+![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_10/img/cluster-info-nodes.png)
 
 通过如下命令可以看到自己节点的的主从信息：
 ![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_10/img/my-replication.jpg)
