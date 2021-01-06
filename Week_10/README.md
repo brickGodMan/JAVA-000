@@ -50,3 +50,8 @@ appendonly yes
 
 通过如下命令可以看到自己节点的的主从信息：
 ![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_10/img/my-replication.jpg)
+
+
+####第二十四课作业
+
+先占位置
