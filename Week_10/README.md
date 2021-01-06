@@ -52,6 +52,6 @@ appendonly yes
 ![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_10/img/my-replication.jpg)
 
 
-####第二十四课作业
+#### 第二十四课作业
 
 先占位置
