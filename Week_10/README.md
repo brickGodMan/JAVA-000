@@ -38,6 +38,7 @@ appendonly yes
 上述命令可以写在shell 脚本中方便下次启动。
 
 当两台机器都启动完毕后执行以下命令./bin/redis-cli --cluster create 192.168.247.128:9001 192.168.247.128:9002 192.168.247.128:9003 192.168.247.129:9001 192.168.247.129:9002 192.168.247.129:9003 --cluster-replicas 1
+
 两台机器总共12个节点，命令中的6个节点将被redis设置为master节点，剩下的将被制动分配为从节点，这样就达到了两台机器均等节点互为主从保证了redis数据高可用。cluster-replicas 1该参数保证主从数据复制比例1:1。效果如下图：
 ![](https://github.com/brickGodMan/JAVA-000/tree/main/Week_10/img/create-cluster.jpg)
 
