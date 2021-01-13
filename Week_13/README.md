@@ -5,8 +5,9 @@
 如要创建一个三节点集群，需要创建三个 kafka 目录副本，分别命名为9001、9002、9003。完成这一步之后，我们开始编写配置文件。以下是配置示例（本机内网ip：192.168.247.130）
 
 可以通过zookeeper可视化工具查看如下图：
-![](https://github.com/brickGodMan/kafka-demo/tree/main/img/kafka-broker.png)
+![节点图](https://github.com/brickGodMan/kafka-demo/tree/main/img/kafka-broker.png)
 
+server.properties 配置：
 ```properties
 ############################# Server Basics #############################
 # The id of the broker. This must be set to a unique integer for each broker.
