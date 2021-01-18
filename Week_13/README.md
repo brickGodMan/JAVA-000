@@ -1,5 +1,11 @@
-## 第二十五课作业
-### 1、搭建一个3节点kafka集群，测试功能和特性；实现spring kafka 下对kafka集群的操作，将代码提交到github
+
+
+## 第十三周作业
+
+
+### 第二十五课作业
+
+1、搭建一个3节点kafka集群，测试功能和特性；实现spring kafka 下对kafka集群的操作，将代码提交到github
 
 #### [项目地址](https://github.com/brickGodMan/kafka-demo.git)
 如要创建一个三节点集群，需要创建三个 kafka 目录副本，分别命名为9001、9002、9003。完成这一步之后，我们开始编写配置文件。以下是配置示例（本机内网ip：192.168.247.130）
@@ -116,9 +122,10 @@ start.time, end.time, data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.s
 2021-01-13 22:21:09:545, 2021-01-13 22:21:18:655, 953.6744, 104.6843, 1000005, 109770.0329, 84, 9026, 105.6586, 110791.6020
 ```
 
-### 在spring boot 中使用spring-kafka 操作kafka集群：
+**在spring boot 中使用spring-kafka 操作kafka集群：**
 
 [application.properties](https://github.com/brickGodMan/kafka-demo/tree/main/src/main/resources/application.properties)
+
 ```properties
 #kafka producer
 kafka.producer.bootstrapServers=192.168.247.130:9001,192.168.247.130:9002,192.168.247.130:9003
@@ -263,4 +270,33 @@ public class Consumer {
 
 [Spring 集成kafka](https://www.cnblogs.com/caoweixiong/p/12987997.html)
 
+### 第二十六课作业
+
+#### [作业一（必做）](https://github.com/brickGodMan/qmq.git)
+
+**1.思考和设计自定义MQ第二个版本和第三个版本，写代码实现其中至少一个功能点，把设计思路和实现代码，提交到github。**
+
+第二个版本：去掉内存queue，实现自定义queue，实现消息确认和消费offset。
+
+- 自定义内存message数组模拟queue
+
+- 使用指针记录当前消息写入位置
+
+- 对于每个命名消费者，用指针记录消费位置
+
+> 设计思路
+>
+> 1. 所有消费者都是读取同一个数组，这里在broker中使用一个AtomicInteger成员变量来保存当前消息的写入位置（writerOffset）。为了实现消息确认必须在加入一个AtomicInteger成员变量用来保存当前可读消息位置（CurrentOffset），等到生产者确认消息写入在把writerOffset的值赋值给currenOffset。
+> 2. 给每个消费者client增加一个offset属性，每次读取queue中消息时都从自己offset属性位置开始。如果消费者client中的offset异常默认从零开始消费消息。
+
+
+
+
+
+*草稿：*
+
+1. *qmq 里面存放主题topic ，队列大小capacity，以及队列queue，并提供放入消息方法（往数组里面塞值）和获取消息方法（获取数组里面的值）。后续实现消息确认需要增加两个属性，当前可消费的位置，以及消息写入的位置*
+2. *qBroker 里面是一个qmq容器，使用map存放不同topic 的 queue，并提供获取每个主题qmq的方法，获取生产者的方法以及获取消费者的方法。*
+3. *qmqProducer 里面存放一个broker实例，可以获取对应主题的qmq，可以通过qmq方法在相应队列里面放入消息*
+4. *qmqConsumer里面存放一个broker实例，可以获取对应主题的qmq，可以通过qmq方法在相应队列里面获取消息。后续实现消费offset需要增加成员变量。*
 
