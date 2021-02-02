@@ -2,7 +2,7 @@
 
 
 
-3.分别用100字以上的一段话，加上一幅图，总结自己对下列技术的关键点思考和经验认识：
+**3.分别用100字以上的一段话，加上一幅图，总结自己对下列技术的关键点思考和经验认识：**
 
 1. JVM
 2. NIO
@@ -28,4 +28,4 @@
 
 3.消息中间件模块：认识了系统间的通信方式，然后演化到标准的MQ，以及MQ相比传统通信方式的优势。分别了解了三代MQ的代表，以及其核心功能与设计思想。着重了解了kafkaMQ。
 
-![](https://github.com/brickGodMan/JAVA-000/blob/main/Week_08/MQ.png)
+![](https://github.com/brickGodMan/JAVA-000/blob/main/Week_15/MQ.png)
